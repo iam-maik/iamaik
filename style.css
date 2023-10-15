@@ -1,9 +1,5 @@
 body {
     background-color: #121212;
     color: #f1f1f1;
-}
-
-.navbar {
-    background-color: aquamarine;
-    margin-top: 0%;
+    text-decoration: none;
 }
