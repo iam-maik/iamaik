@@ -1,26 +1,7 @@
 body {
-    background: linear-gradient(90deg, rgb(43, 0, 71) 10%, rgb(173, 0, 58) 90%);
-    margin: 0;
-    border: 0;
-    padding: 0;
+    background-color: #1f1f1f;
 }
 
-.main {
-    background: rgba(255, 255, 255, 0.267);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    height: 100px;
-    transition: 500ms;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.main:hover {
-    background: rgba(255, 255, 255, 0.267);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    height: 200px;
-    transition: 500ms;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+#sidebar {
+    background-color: #2d2f31;
 }
