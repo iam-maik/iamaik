@@ -8,3 +8,9 @@ body {
     min-height: 100vh;
     max-width: 10vh;
 }
+
+#sidebar-extend {
+    background-color: #2d2f31;
+    min-height: 100vh;
+    max-width: 0;
+}
