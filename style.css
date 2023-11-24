@@ -1,7 +1,12 @@
 body {
     background-color: #1f1f1f;
+    margin: 0;
 }
 
 #sidebar {
     background-color: #2d2f31;
+    margin-left: 0;
+    height: 100%;
+    width: 12.5%;
+
 }
