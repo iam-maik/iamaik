@@ -4,17 +4,16 @@ body {
 }
 
 #sidebar {
+position: fixed;
+    top: 0; 
+    left: 0;
+    width: 10vh; 
+    height: 100vh; 
     background-color: #2d2f31;
-    min-height: 100vh;
-    max-width: 10vh;
+    z-index: 1000;
 }
+
 
 #sidebar-extend {
-    background-color: #2d2f31;
-    min-height: 100vh;
-    max-width: 0;
-}
-
-#sidebar:hover + #sidebar-extend {
-    max-width: 20vh;
+    
 }
