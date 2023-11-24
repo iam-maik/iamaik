@@ -14,3 +14,7 @@ body {
     min-height: 100vh;
     max-width: 0;
 }
+
+#sidebar:hover + #sidebar-extend {
+    max-width: 20vh;
+}
