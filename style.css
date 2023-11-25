@@ -31,4 +31,6 @@ body {
     height: 100vh; 
     background-color: #2d2f31;
     z-index: 1000;
+    border: 0;
+    border-right: 1px solid #444746;
 }
