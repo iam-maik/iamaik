@@ -16,16 +16,14 @@ body {
 #sidebar-extend {
     position: fixed;
     top: 0; 
-    left: 0;
-    width: 10vh; 
+    left: -10vh;
+    width: 20vh; 
     height: 100vh; 
     background-color: #2d2f31;
     z-index: 1000;
-    border: 0;
-    border-left: 1px solid #444746;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    transition: 500ms;
 }
+
 
 #sidebar:hover #sidebar-extend {
     position: fixed;
@@ -39,4 +37,5 @@ body {
     border-left: 1px solid #444746;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    transition: 500ms
 }
