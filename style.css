@@ -11,9 +11,6 @@ body {
     height: 100vh; 
     background-color: #2d2f31;
     z-index: 1000;
-}
-
-
-#sidebar-extend {
-    
+    border-left: #444746;
+    border-width: 2px;
 }
