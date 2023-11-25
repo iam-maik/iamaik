@@ -11,6 +11,24 @@ body {
     height: 100vh; 
     background-color: #2d2f31;
     z-index: 1000;
-    border-left: #444746;
-    border-width: 2px;
+}
+
+#sidebar-extend {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 0vh; 
+    height: 100vh; 
+    background-color: #2d2f31;
+    z-index: 1000;
+}
+
+#sidebar:hover #sidebar-extend {
+    position: fixed;
+    top: 0; 
+    left: 10vh;
+    width: 10vh; 
+    height: 100vh; 
+    background-color: #2d2f31;
+    z-index: 1000;
 }
