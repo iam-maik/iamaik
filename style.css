@@ -39,3 +39,7 @@ body {
     border-bottom-right-radius: 15px;
     transition: 500ms
 }
+
+#title {
+    text-align: center;
+}
