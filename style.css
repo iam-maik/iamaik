@@ -4,7 +4,7 @@ body {
 }
 
 
-#warumspieltesfürsiekeinerolle {
+#keinerolle {
     position: fixed;
     top: 2vh;
     left: 20vh;
@@ -14,7 +14,7 @@ body {
     color: #e26f23;
 }
 
-#warumdarfichhiernichteinchecken {
+#nichteinchecken {
     position: fixed;
     top: 5vh;
     left: 20vh;
