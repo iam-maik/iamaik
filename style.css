@@ -16,12 +16,22 @@ body {
 
 
 
-#fragnichtwas {
+#warumspieltesfürsiekeinerolle {
     position: fixed;
     top: 2vh;
     left: 20vh;
     text-align: center;
     font-size: 80px;
+    font-family: monospace;
+    color: #e26f23;
+}
+
+#warumdarfichhiernichteinchecken {
+    position: fixed;
+    top: 5vh;
+    left: 20vh;
+    text-align: center;
+    font-size: 60px;
     font-family: monospace;
     color: #e26f23;
 }
