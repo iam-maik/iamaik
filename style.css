@@ -4,5 +4,6 @@ body {
 }
 
 #video  {
-    position: auto;
+    position: fixed;
+    right: 20vh;
 }
