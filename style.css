@@ -10,7 +10,7 @@ body {
     width: 10vh; 
     height: 100vh; 
     background-color: #2d2f31;
-    z-index: 999;
+    z-index: 1000;
 }
 
 #sidebar-extend {
