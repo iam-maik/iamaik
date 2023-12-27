@@ -20,7 +20,7 @@ body {
     width: 20vh; 
     height: 100vh; 
     background-color: #2d2f31;
-    z-index: 998;
+    z-index: 999;
     transition: 250ms;
 }
 
@@ -32,7 +32,7 @@ body {
     width: 20vh;
     height: 100vh; 
     background-color: #2d2f31;
-    z-index: 998;
+    z-index: 999;
     border: 0;
     border-left: 1px solid #444746;
     border-top-right-radius: 15px;
