@@ -17,6 +17,9 @@ body {
 
 
 #fragnichtwas {
+    position: fixed;
+    top: 2vh;
+    left: 20vh;
     text-align: center;
     color: #e26f23;
     font-family: monospace;
