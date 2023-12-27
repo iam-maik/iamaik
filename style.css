@@ -19,4 +19,6 @@ body {
 #fragnichtwas {
     text-align: center;
     color: #e26f23;
+    font-family: monospace;
+    font-size: larger;
 }
