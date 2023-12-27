@@ -3,7 +3,8 @@ body {
 }
 
 a {
-
+    position: fixed;
+    top: 70vh;
 }
 
 #video  {
