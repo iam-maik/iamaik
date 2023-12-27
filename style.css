@@ -2,25 +2,3 @@ body {
     background-color: #1f1f1f;
     margin: auto;
 }
-
-
-#keinerolle {
-    position: fixed;
-    top: 2vh;
-    left: 20vh;
-    text-align: center;
-    font-size: 80px;
-    font-family: monospace;
-    color: #e26f23;
-}
-
-#nichteinchecken {
-    position: fixed;
-    top: 50vh;
-    left: 20vh;
-    text-align: center;
-    font-size: 60px;
-    font-family: monospace;
-    color: #e26f23;
-}
-
