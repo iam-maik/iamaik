@@ -3,18 +3,6 @@ body {
     margin: auto;
 }
 
-#sidebar {
-    position: fixed;
-    top: 1vh; 
-    left: 1vh;
-    bottom: 1vh;
-    width: 10vh; 
-    height: 100vh; 
-    background-color: #2d2f31;
-    z-index: 1000;
-}
-
-
 
 #warumspieltesfürsiekeinerolle {
     position: fixed;
@@ -35,3 +23,4 @@ body {
     font-family: monospace;
     color: #e26f23;
 }
+
