@@ -2,7 +2,12 @@ body {
     background-color: #1f1f1f;
 }
 
+a {
+
+}
+
 #video  {
     position: fixed;
     right: 20vh;
+    size-adjust: auto;
 }
