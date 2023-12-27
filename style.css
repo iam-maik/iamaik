@@ -21,7 +21,7 @@ body {
     top: 2vh;
     left: 20vh;
     text-align: center;
-    color: #e26f23;
+    font-size: 80px;
     font-family: monospace;
-    size: 80px;
+    color: #e26f23;
 }
