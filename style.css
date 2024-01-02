@@ -3,5 +3,11 @@ body {
 }
 
 #sidebar {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    bottom: 2vh;
+    border-radius: 10px;
+
     background-color: #121212;
 }
