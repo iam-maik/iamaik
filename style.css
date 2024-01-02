@@ -1,14 +1,7 @@
 body {
-    background-color: #1f1f1f;
+    background-color: #000000;
 }
 
-a {
-    position: fixed;
-    top: 70vh;
-}
-
-#video  {
-    position: fixed;
-    right: 20vh;
-    size-adjust: auto;
+#sidebar {
+    background-color: #121212;
 }
