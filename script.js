@@ -19,5 +19,7 @@ setInterval(function () {
     setInterval(function () {
         updateClock( clockElement );
     }, 1000);
+
+    console.log('was mache ich hier')
   
   }());
