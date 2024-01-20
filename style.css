@@ -9,6 +9,15 @@ body {
     bottom: 1vh;
     width: 10vh;
     border-radius: 10px;
+    background-color: #121212;
+}
 
+#sidebar:hover {
+    position: fixed;
+    top: 1vh;
+    left: 1vh;
+    bottom: 1vh;
+    width: 20;
+    border-radius: 10px;
     background-color: #121212;
 }
