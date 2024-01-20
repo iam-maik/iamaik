@@ -9,7 +9,7 @@ body {
     bottom: 1vh;
     width: 10vh;
     border-radius: 10px;
-    background-color: #121212;
+    background-color: rgba(255,255,255,0.14)
     transition: ease-in-out;
 }
 
@@ -20,6 +20,6 @@ body {
     bottom: 1vh;
     width: 20vh;
     border-radius: 10px;
-    background-color: #121212;
+    background-color: rgba(255,255,255,0.14)
     transition: ease-in-out;
 }
