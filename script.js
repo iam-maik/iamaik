@@ -14,12 +14,11 @@ setInterval(function () {
   
     function updateClock ( clock ) {
       clock.innerHTML = new Date().toLocaleTimeString();
+      console.log('was mache ich hier')
     }
   
     setInterval(function () {
         updateClock( clockElement );
     }, 1000);
-
-    console.log('was mache ich hier')
   
   }());
