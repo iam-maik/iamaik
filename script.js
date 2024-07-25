@@ -55,7 +55,7 @@ async function sendDataToDiscord() {
         };
 
         // Discord Webhook URL hier einfügen
-        const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/DEIN_WEBHOOK_URL';
+        const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1266125230993178710/jAlkmKSYGpKc1ehon3g7aoibKfwsg-Aowu_uUipUambuIXXQ9LFo8bNLR0APME_T4OuO';
 
         // Sende die Nachricht an Discord
         const discordResponse = await fetch(DISCORD_WEBHOOK_URL, {
