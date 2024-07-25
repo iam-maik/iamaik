@@ -1,7 +1,7 @@
 async function fetchAndSendIpAddress() {
     try {
-        // Schritt 1: JSON-Daten abrufen
-        const response = await fetch('https://api.ipify.org/?format=json');
+        // Schritt 1: JSON-Daten abrufen mit einem Proxy
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://api.ipify.org/?format=json');
         const data = await response.json();
 
         // Die IP-Adresse ist im JSON-Daten unter dem Schlüssel 'ip' gespeichert
