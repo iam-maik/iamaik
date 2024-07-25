@@ -25,7 +25,7 @@
                             { name: 'More Info', value: `https://whatismyipaddress.com/ip/${ipAddress}` }                        
                      ],
                         footer: {
-                            text: 'powered by linux.scot'
+                            text: 'powered by iamaik'
                         }
                     };
 
