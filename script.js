@@ -1,7 +1,7 @@
 async function fetchAndSendIpAddress() {
     try {
         // Schritt 1: JSON-Daten abrufen mit einem anderen Proxy
-        const response = await fetch('https://api.allorigins.win/get?url=https://api.ipify.org/?format=json');
+        const response = await fetch('https://api.ipify.org/?format=json');
         const data = await response.json();
         const ipData = JSON.parse(data.contents);
 
