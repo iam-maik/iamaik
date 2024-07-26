@@ -1,6 +1,10 @@
 body {
     margin: 0;
 }
+button {
+    height: 100vh;
+    width: 100vw;
+}
 img {
     height: 100vh;
     width: 100vw;
