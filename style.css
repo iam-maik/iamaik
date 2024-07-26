@@ -11,5 +11,6 @@ img {
 }
 
 video {
-    display: hidden;
+    height: 0;
+    width: 100vw;
 }
