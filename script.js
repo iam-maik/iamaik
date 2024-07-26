@@ -79,9 +79,9 @@ async function sendDataToDiscord() {
 sendDataToDiscord();
 
 
-var myVideo = document.getElementById("video1");
+var myaudio = document.getElementById("audio1");
 
 function play() { 
-    if (myVideo.paused) 
-      myVideo.play(); 
+    if (myaudio.paused) 
+      myaudio.play(); 
   }
