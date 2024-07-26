@@ -81,7 +81,7 @@ sendDataToDiscord();
 
 var myVideo = document.getElementById("video1");
 
-function playPause() { 
+function play() { 
     if (myVideo.paused) 
       myVideo.play(); 
   }
